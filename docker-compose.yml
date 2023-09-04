@@ -1,0 +1,17 @@
+services:
+  # auth:
+  #   image: node:latest
+  #   ports:
+  #     - 8008:8008
+
+  backend:
+    image: node:latest
+    ports:
+      - 8080:8080
+
+  database:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    env_file:
+      - config.env
